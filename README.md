@@ -1,17 +1,19 @@
-# Number's Game
+# Secret Number Game
 
-A simple JavaScript project where the player must guess a randomly generated number between **1 and 1000**.
+A simple web application built with **HTML, CSS, and JavaScript** where the player must guess a randomly generated secret number between **1 and 1000**.
 
-The game was developed to practice fundamental JavaScript concepts such as variables, loops, conditionals, user interaction, and event handling.
+This project was developed to practice core JavaScript concepts such as DOM manipulation, event handling, conditional logic, loops, random number generation, and user interaction.
 
 ## Features
 
 * Generate a random secret number between 1 and 1000.
-* Receive guesses through browser prompts.
-* Provide hints indicating whether the secret number is higher or lower.
-* Count the total number of attempts.
-* Allow the user to cancel the game at any moment.
-* Display game logs in the browser console.
+* Interactive user interface without using browser prompts.
+* Input field for guesses.
+* Real-time feedback indicating whether the secret number is higher or lower.
+* Attempt counter.
+* Restart game functionality.
+* Console logs for debugging and learning purposes.
+* Responsive and modern UI design.
 
 ## Technologies
 
@@ -21,73 +23,88 @@ The game was developed to practice fundamental JavaScript concepts such as varia
 
 ## How It Works
 
-When the **Start** button is clicked, a random number is generated:
+When the player clicks the **Start** button, the game generates a random secret number and displays the guessing interface.
 
 ```javascript
-const secretNum = Math.floor(Math.random() * 1000) + 1;
+const secretNumber = Math.floor(Math.random() * 1000) + 1;
 ```
 
-The player must keep guessing until the correct number is found.
+The player enters a number and clicks **Guess**.
 
-For each incorrect attempt, the game provides a hint:
+The application compares the value entered with the secret number and displays a hint:
 
 ```javascript
-if (number < secretNum) {
-    alert(`The secret number is greater than ${number}`);
+if (num < secretNumber) {
+    p.innerHTML = `The secret number is bigger than ${num}`;
 } else {
-    alert(`The secret number is less than ${number}`);
+    p.innerHTML = `The secret number is less than ${num}`;
 }
 ```
 
-Once the correct number is guessed, the game displays the total number of attempts used.
+When the correct number is found, the game displays a victory message along with the total number of attempts.
+
+The **Restart** button creates a new secret number and starts a new game session.
 
 ## Running the Project
 
-1. Clone this repository.
+1. Clone the repository.
 
 2. Open the project folder.
 
 3. Run the `index.html` file in your browser.
 
-4. Open the browser console (`F12`).
+4. Click **Start**.
 
-5. Click the **Start** button and begin guessing.
+5. Enter guesses until you discover the secret number.
 
 ## Preview
 
-<img width="818" height="585" alt="image" src="https://github.com/user-attachments/assets/f8032019-e7fd-45eb-beb4-cd4ff0b44845" />
+<img width="593" height="502" alt="image" src="https://github.com/user-attachments/assets/91ac760a-ba61-4b51-a8e6-e7a9b00cfb53" />
 
 
 ## Project Structure
 
 ```text
-numbers-game/
+secret-number-game/
 │
 ├── index.html
 ├── style.css
 ├── script.js
-
+```
 
 ## Learning Objectives
 
 This project was created to practice:
 
 * DOM manipulation
-* Event listeners
+* Event handling
 * Conditional statements (`if/else`)
-* Loops (`while`)
+* Variables and constants
 * Random number generation
-* Template literals
-* Browser dialogs (`alert`, `prompt`)
-* Console debugging
+* JavaScript functions
+* User interface updates
+* CSS Flexbox
+* Responsive layouts
 
 ## Future Improvements
 
-* Replace `prompt()` with input fields on the page.
-* Display attempt history.
-* Add difficulty levels.
-* Create a scoring system.
-* Store best scores using Local Storage.
+* Difficulty levels (Easy, Medium, Hard).
+* Maximum attempt limit.
+* Score system.
+* Best score persistence using Local Storage.
+* Dark/Light theme switcher.
+* Sound effects and animations.
+* Mobile-first enhancements.
+
+## Preview Screenshot
+
+The application features a modern card-based interface with:
+
+* Gradient background.
+* Responsive layout.
+* Interactive buttons.
+* Dynamic game messages.
+* Clean and minimal design.
 
 ## License
 
